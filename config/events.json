@@ -1,0 +1,90 @@
+{
+  "festName": "TechFest 2026",
+  "hostCollege": {
+    "name": "Host Engineering College",
+    "aliases": [
+      "HEC",
+      "Host Tech"
+    ],
+    "rollNumberPattern": "^[A-Za-z0-9]+$"
+  },
+  "payment": {
+    "upiId": "festorganizer@upi",
+    "payeeName": "Fest Organizing Committee",
+    "currency": "INR",
+    "note": "Event Registration"
+  },
+  "secretKey": "change-this-to-a-secure-random-secret-key-in-production",
+  "adminNumbers": [
+    "910000000000"
+  ],
+  "groupDistributionStrategy": "individual",
+  "sharedCommunityGroup": {
+    "groupJid": "",
+    "inviteLink": ""
+  },
+  "events": [
+    {
+      "id": "CODE_RELAY",
+      "name": "Coding Relay",
+      "category": "Technical",
+      "fee": 150,
+      "hostFee": 0,
+      "venue": "Lab 3, CS Block",
+      "schedule": "Day 1, 10:00 AM",
+      "groupJid": "",
+      "inviteLink": "",
+      "description": "3-member team speed coding relay challenge.",
+      "slot_limit": 60,
+      "max_team_size": 3
+    },
+    {
+      "id": "WEB_MATRIX",
+      "name": "Web Matrix",
+      "category": "Technical",
+      "fee": 150,
+      "hostFee": 0,
+      "venue": "Lab 1, CS Block",
+      "schedule": "Day 1, 11:30 AM",
+      "groupJid": "",
+      "inviteLink": "",
+      "description": "2-member team web design and development showdown.",
+      "slot_limit": 40,
+      "max_team_size": 2
+    },
+    {
+      "id": "TECH_QUIZ",
+      "name": "Tech Quiz",
+      "category": "Technical",
+      "fee": 100,
+      "hostFee": 0,
+      "venue": "Seminar Hall A",
+      "schedule": "Day 1, 02:00 PM",
+      "groupJid": "",
+      "inviteLink": "",
+      "description": "Solo technical trivia and computer science concepts.",
+      "slot_limit": 100,
+      "max_team_size": 1
+    },
+    {
+      "id": "HACKATHON",
+      "name": "24H Hackathon",
+      "category": "Technical",
+      "fee": 300,
+      "hostFee": 0,
+      "venue": "Innovation Center",
+      "schedule": "Day 1-2, 09:00 AM",
+      "groupJid": "",
+      "inviteLink": "",
+      "description": "4-member product prototyping hackathon.",
+      "slot_limit": 30,
+      "max_team_size": 4
+    }
+  ],
+  "faq": {
+    "food": "Lunch and refreshments will be provided at the central dining hall.",
+    "accommodation": "Dormitory accommodation is available upon request at the registration desk.",
+    "transport": "College bus service is available from the central railway station at 8:00 AM.",
+    "od": "Digital OD verification pass is generated automatically upon registration."
+  }
+}

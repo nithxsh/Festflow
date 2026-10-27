@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 440" width="100%" height="100%">
+  <defs>
+    <style>
+      @keyframes floatMsg1 { 0% { opacity: 0; transform: translateY(12px); } 12% { opacity: 1; transform: translateY(0); } 90% { opacity: 1; } 100% { opacity: 0; } }
+      @keyframes floatMsg2 { 0%, 15% { opacity: 0; transform: translateY(12px); } 28% { opacity: 1; transform: translateY(0); } 90% { opacity: 1; } 100% { opacity: 0; } }
+      @keyframes floatMsg3 { 0%, 32% { opacity: 0; transform: translateY(12px); } 44% { opacity: 1; transform: translateY(0); } 90% { opacity: 1; } 100% { opacity: 0; } }
+      @keyframes floatMsg4 { 0%, 48% { opacity: 0; transform: translateY(12px); } 62% { opacity: 1; transform: translateY(0); } 90% { opacity: 1; } 100% { opacity: 0; } }
+      @keyframes typingDot { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+      @keyframes passGlow { 0%, 100% { stroke: #06b6d4; } 50% { stroke: #10b981; } }
+      
+      .bg { fill: #0b141a; }
+      .header-bg { fill: #202c33; }
+      .user-bubble { fill: #005c4b; }
+      .bot-bubble { fill: #202c33; }
+      .txt-white { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; fill: #e9edef; font-size: 14px; }
+      .txt-dim { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; fill: #8696a0; font-size: 11px; }
+      .pass-box { fill: #111b21; stroke-width: 1.5; animation: passGlow 3s infinite; rx: 4px; }
+      
+      .msg-1 { animation: floatMsg1 9s infinite; }
+      .msg-2 { animation: floatMsg2 9s infinite; }
+      .msg-3 { animation: floatMsg3 9s infinite; }
+      .msg-4 { animation: floatMsg4 9s infinite; }
+      
+      .d1 { animation: typingDot 1s infinite 0.1s; }
+      .d2 { animation: typingDot 1s infinite 0.2s; }
+      .d3 { animation: typingDot 1s infinite 0.3s; }
+    </style>
+  </defs>
+
+  <!-- Phone Container -->
+  <rect width="1100" height="440" rx="8" class="bg" />
+
+  <!-- WhatsApp Top Header -->
+  <rect width="1100" height="60" rx="8" class="header-bg" />
+  <rect y="48" width="1100" height="12" class="header-bg" />
+  
+  <!-- WhatsApp Logo / Avatar -->
+  <rect x="24" y="12" width="36" height="36" rx="4" fill="#25D366" />
+  <path d="M42 22 C37.5 22 34 25.5 34 30 C34 31.5 34.4 33 35.2 34.2 L34 38 L38 36.8 C39.2 37.5 40.5 38 42 38 C46.5 38 50 34.5 50 30 C50 25.5 46.5 22 42 22 Z" fill="#ffffff" />
+  
+  <text x="72" y="32" font-family="-apple-system, sans-serif" font-size="16" font-weight="700" fill="#e9edef">FestFlow Event Engine</text>
+  <text x="72" y="47" font-family="-apple-system, sans-serif" font-size="11" fill="#25D366" font-weight="600">● 24/7 automated registration &amp; instant pass dispatcher</text>
+
+  <!-- Left Column: Registration Dialog -->
+  <!-- Message 1 (Attendee) -->
+  <g class="msg-1">
+    <path d="M 440 85 L 560 85 Q 566 85 566 91 L 566 117 Q 566 123 560 123 L 440 123 Q 434 123 434 117 L 434 91 Q 434 85 440 85 Z" class="user-bubble" />
+    <text x="450" y="106" class="txt-white">Hi, register me</text>
+    <text x="532" y="117" class="txt-dim">10:01</text>
+  </g>
+
+  <!-- Message 2 (Bot Menu) -->
+  <g class="msg-2">
+    <rect x="40" y="135" width="460" height="96" rx="6" class="bot-bubble" />
+    <text x="56" y="158" class="txt-white" font-weight="600">Welcome to TechFest 2026!</text>
+    <text x="56" y="178" class="txt-white">1. Host Student (100% Free + Automatic OD Intimation)</text>
+    <text x="56" y="196" class="txt-white">2. External Delegate (Dynamic UPI QR + Spot Entry)</text>
+    <text x="56" y="218" class="txt-dim" fill="#64748b">Reply 1 or 2 to select track</text>
+    <text x="460" y="222" class="txt-dim">10:01</text>
+  </g>
+
+  <!-- Message 3 (User selection) -->
+  <g class="msg-3">
+    <rect x="480" y="245" width="80" height="36" rx="6" class="user-bubble" />
+    <text x="498" y="268" class="txt-white">1</text>
+    <text x="524" y="274" class="txt-dim">10:02</text>
+  </g>
+
+  <!-- Message 4 (Bot Pass Delivery) -->
+  <g class="msg-4">
+    <rect x="40" y="295" width="520" height="125" rx="6" class="bot-bubble" />
+    <text x="56" y="318" class="txt-white" font-weight="600" fill="#10b981">✅ Registration Verified &amp; Pass Dispatched!</text>
+    <text x="56" y="336" class="txt-white">Event: Coding Relay | Track: Host Pass (FREE)</text>
+    
+    <rect x="56" y="348" width="488" height="60" class="pass-box" />
+    <text x="70" y="370" font-family="monospace" font-size="13" font-weight="700" fill="#06b6d4">🎟️ TICKET TOKEN: FF-2026-9284-NX</text>
+    <text x="70" y="392" font-family="monospace" font-size="11" fill="#10b981">GATE STATUS: CHECKED IN • MENTOR OD ALERT SENT</text>
+  </g>
+
+  <!-- Right Side: Live Terminal HUD / Engine Metrics -->
+  <g transform="translate(600, 75)">
+    <rect width="460" height="345" rx="6" fill="#090e17" stroke="#1e293b" stroke-width="1.5" />
+    
+    <!-- Titlebar -->
+    <rect width="460" height="32" rx="6" fill="#131d2e" />
+    <circle cx="16" cy="16" r="4" fill="#ef4444" />
+    <circle cx="30" cy="16" r="4" fill="#f59e0b" />
+    <circle cx="44" cy="16" r="4" fill="#10b981" />
+    <text x="60" y="20" font-family="monospace" font-size="11" fill="#94a3b8">festflow-daemon --stream-monitor</text>
+
+    <!-- Terminal logs -->
+    <g transform="translate(18, 55)">
+      <text y="0" font-family="monospace" font-size="12" fill="#64748b">&gt; [BAILEYS] Socket stream online</text>
+      <text y="22" font-family="monospace" font-size="12" fill="#38bdf8">&gt; [STATE] Session started for attendee</text>
+      <text y="44" font-family="monospace" font-size="12" fill="#10b981">&gt; [DB] Roll number verified (no duplicate)</text>
+      <text y="66" font-family="monospace" font-size="12" fill="#f59e0b">&gt; [OCR] Transaction Slip: UTR match [12-digit]</text>
+      <text y="88" font-family="monospace" font-size="12" fill="#38bdf8">&gt; [HMAC] Pass token signed (Web Crypto)</text>
+      <text y="110" font-family="monospace" font-size="12" fill="#10b981">&gt; [DISPATCH] Canvas pass image sent to WhatsApp</text>
+    </g>
+
+    <!-- Metrics Cards inside terminal -->
+    <g transform="translate(18, 190)">
+      <rect width="130" height="65" rx="4" fill="#0f172a" stroke="#1e293b" stroke-width="1" />
+      <text x="12" y="24" font-family="monospace" font-size="10" fill="#64748b">OCR SPEED</text>
+      <text x="12" y="48" font-family="monospace" font-size="18" font-weight="700" fill="#10b981">&lt; 1.5s</text>
+
+      <rect x="145" width="130" height="65" rx="4" fill="#0f172a" stroke="#1e293b" stroke-width="1" />
+      <text x="157" y="24" font-family="monospace" font-size="10" fill="#64748b">REPLAY FRAUD</text>
+      <text x="157" y="48" font-family="monospace" font-size="16" font-weight="700" fill="#06b6d4">0% LEAK</text>
+
+      <rect x="290" width="130" height="65" rx="4" fill="#0f172a" stroke="#1e293b" stroke-width="1" />
+      <text x="302" y="24" font-family="monospace" font-size="10" fill="#64748b">ADMISSION</text>
+      <text x="302" y="48" font-family="monospace" font-size="16" font-weight="700" fill="#38bdf8">OFFLINE</text>
+    </g>
+
+    <text x="18" y="295" font-family="monospace" font-size="11" fill="#64748b">Automated Gate Control Engine Active</text>
+    <circle cx="270" cy="292" r="3" fill="#10b981" class="d1" />
+    <circle cx="280" cy="292" r="3" fill="#10b981" class="d2" />
+    <circle cx="290" cy="292" r="3" fill="#10b981" class="d3" />
+  </g>
+</svg>

@@ -1,0 +1,34 @@
+services:
+  - type: worker
+    name: festflow-whatsapp-bot
+    runtime: node
+    plan: starter
+    buildCommand: npm install --omit=dev
+    startCommand: node src/bot.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: SUPABASE_STORAGE_BUCKET
+        value: fest-passes
+      - key: UPI_VPA
+        sync: false
+      - key: UPI_PAYEE_NAME
+        sync: false
+      - key: PASS_SIGNING_SECRET
+        generateValue: true
+      - key: HOST_COLLEGE_NAME
+        sync: false
+      - key: ADMIN_PHONE
+        sync: false
+      - key: BOT_PHONE_NUMBER
+        sync: false
+      - key: AUTH_FOLDER
+        value: /var/data/auth_info_baileys
+    disk:
+      name: festflow-auth-storage
+      mountPath: /var/data
+      sizeGB: 1

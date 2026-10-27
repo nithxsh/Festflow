@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Environment and sensitive keys
+.env
+.env.local
+.env.*.local
+
+# WhatsApp authentication session
+auth_info_baileys/
+
+# Generated logs and runtime data
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS and Editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Temporary output directories
+brag-output/
+out/
+dist/
+temp/
+.temp/

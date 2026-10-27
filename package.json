@@ -1,0 +1,45 @@
+{
+  "name": "festflow",
+  "version": "1.0.0",
+  "description": "WhatsApp Event Registration, Ticketing & OD Verification System",
+  "type": "module",
+  "main": "bin/cli.js",
+  "bin": {
+    "festflow": "./bin/cli.js"
+  },
+  "scripts": {
+    "start": "node bin/cli.js",
+    "cli": "node bin/cli.js",
+    "bot:live": "node src/bot.js",
+    "setup": "node scripts/setup.js",
+    "check": "node --check bin/cli.js && node --check src/bot.js && node --check src/stateMachine.js && node --check src/simulator.js && node --check src/templateManager.js && node --check src/supabase.js && node --check src/ocrVerifier.js && node --check src/passGenerator.js && node --check src/groupManager.js && node --check src/mentorListener.js && node --check src/spotRegistrar.js && node --check src/sessionStore.js && node --check src/broadcastManager.js && node --check src/canvasAdapter.js && node --check src/fraudDetector.js && node --check scripts/setup.js",
+    "test": "node tests/testSuite.js"
+  },
+  "keywords": [
+    "whatsapp",
+    "baileys",
+    "festflow",
+    "event-registration",
+    "supabase",
+    "tesseract-ocr",
+    "ticketing"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@clack/prompts": "^0.9.1",
+    "@google/genai": "^2.31.0",
+    "@hapi/boom": "^10.0.1",
+    "@napi-rs/canvas": "^0.1.68",
+    "@supabase/supabase-js": "^2.49.1",
+    "@whiskeysockets/baileys": "^6.7.18",
+    "dotenv": "^16.4.7",
+    "picocolors": "^1.1.1",
+    "pino": "^9.6.0",
+    "qrcode": "^1.5.4",
+    "tesseract.js": "^6.0.0"
+  },
+  "optionalDependencies": {
+    "@napi-rs/canvas-win32-x64-msvc": "*"
+  }
+}
